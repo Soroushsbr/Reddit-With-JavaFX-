@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="546.0" prefWidth="811.0" style="-fx-background-color: #282A36;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reddit.SelectPost">
+   <children>
+      <AnchorPane layoutX="40.0" layoutY="28.0" prefHeight="272.0" prefWidth="731.0" style="-fx-background-color: #44475A; -fx-background-radius: 10;" />
+      <Label fx:id="title" layoutX="58.0" layoutY="93.0" text="Title" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="text" alignment="TOP_LEFT" layoutX="57.0" layoutY="130.0" prefHeight="170.0" prefWidth="697.0" text="text" textFill="#c6c6c6">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Line endX="630.0" layoutX="140.0" layoutY="308.0" startX="-100.0" stroke="#9e9e9e" />
+      <Button layoutX="113.0" layoutY="308.0" mnemonicParsing="false" onAction="#upvote" prefHeight="38.0" prefWidth="39.0" style="-fx-background-insets: 1000;" text="⬆" textFill="#ff7000">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="207.0" layoutY="308.0" mnemonicParsing="false" onAction="#downvote" prefHeight="38.0" prefWidth="39.0" style="-fx-background-insets: 100;" text="⬇" textFill="#ff7000">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Label fx:id="karma" alignment="CENTER" contentDisplay="CENTER" layoutX="151.0" layoutY="310.0" prefHeight="31.0" prefWidth="55.0" text="karma" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="730.0" layoutY="48.0" mnemonicParsing="false" onAction="#timeline" style="-fx-background-insets: 1; -fx-background-radius: 100; -fx-background-color: #c6c6c6;" text="⮜">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <AnchorPane fx:id="anchorPaneComments" layoutX="39.0" layoutY="343.0" prefHeight="200.0" prefWidth="731.0" visible="false">
+         <children>
+            <TextArea fx:id="textArea" layoutX="101.0" prefHeight="162.0" prefWidth="511.0" promptText="Add a comment" />
+            <Button layoutX="337.0" layoutY="162.0" mnemonicParsing="false" onAction="#postComment" style="-fx-background-insets: 1; -fx-background-radius: 100;" text="Post" />
+         </children>
+      </AnchorPane>
+      <Button layoutX="390.0" layoutY="308.0" mnemonicParsing="false" onAction="#newComment" prefHeight="35.0" prefWidth="32.0" style="-fx-background-insets: 100;" text="➕" textFill="WHITE" />
+      <ScrollPane fx:id="scrollPane" layoutX="113.0" layoutY="343.0" prefHeight="200.0" prefWidth="583.0" style="-fx-background-color: black;">
+         <content>
+            <VBox fx:id="commentVbox" prefHeight="198.0" prefWidth="581.0" style="-fx-background-color: #44475A;" />
+         </content>
+      </ScrollPane>
+      <Button layoutX="302.0" layoutY="308.0" mnemonicParsing="false" onAction="#showComment" prefHeight="35.0" prefWidth="88.0" style="-fx-background-insets: 100;" text="Comments" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Hyperlink fx:id="subreddit" layoutX="58.0" layoutY="42.0" onAction="#selectSubreddit" text="r/subreddit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="username" layoutX="57.0" layoutY="65.0" onAction="#selectUsername" text="username" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Hyperlink>
+      <Rectangle fx:id="backgroundReplay" arcHeight="5.0" arcWidth="5.0" height="546.0" opacity="0.31" stroke="BLACK" strokeType="INSIDE" visible="false" width="811.0" />
+      <AnchorPane fx:id="selectedCommentPane" layoutX="209.0" layoutY="130.0" prefHeight="281.0" prefWidth="395.0" style="-fx-background-color: #44475A; -fx-background-radius: 10;" visible="false">
+         <children>
+            <Label fx:id="writerLabel" layoutX="14.0" layoutY="8.0" prefHeight="25.0" prefWidth="74.0" text="u/username" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="commentTextLabel" alignment="TOP_LEFT" layoutX="23.0" layoutY="33.0" prefHeight="69.0" prefWidth="294.0" text="text" textFill="WHITE" />
+            <ListView fx:id="listViewReplay" layoutX="42.0" layoutY="137.0" prefHeight="124.0" prefWidth="301.0" style="-fx-background-color: #282A36;" />
+            <Button layoutX="319.0" layoutY="110.0" mnemonicParsing="false" onAction="#newReplayShow" prefHeight="25.0" prefWidth="28.0" style="-fx-background-insets: 100;" text="➕" textFill="WHITE" />
+            <TextArea fx:id="textAreaReplay" layoutX="42.0" layoutY="137.0" prefHeight="102.0" prefWidth="301.0" promptText="Add a Replay..." style="-fx-background-color: black;" visible="false" />
+            <Button fx:id="closeReplayButton" layoutX="315.0" layoutY="137.0" mnemonicParsing="false" onAction="#hideNewReplay" prefHeight="16.0" prefWidth="28.0" style="-fx-background-color: white; -fx-background-insets: 1;" text="X" visible="false" />
+            <Button layoutX="360.0" layoutY="8.0" mnemonicParsing="false" onAction="#hideComment" prefHeight="25.0" prefWidth="28.0" style="-fx-background-radius: 100; -fx-background-insets: 1; -fx-background-color: #c6c6c6;" text="X" />
+            <Button fx:id="postReplay" layoutX="173.0" layoutY="239.0" mnemonicParsing="false" onAction="#AddReplay" prefHeight="25.0" prefWidth="39.0" text="Post" visible="false" />
+            <Button layoutX="51.0" layoutY="112.0" mnemonicParsing="false" onAction="#upvoteComment" prefHeight="25.0" prefWidth="28.0" style="-fx-background-insets: 100;" text="⬆" textFill="#ff7000">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Button layoutX="125.0" layoutY="112.0" mnemonicParsing="false" onAction="#downvoteComment" prefHeight="25.0" prefWidth="28.0" style="-fx-background-insets: 100;" text="⬇" textFill="#ff7000">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+            <Label fx:id="karmaCommentLabel" alignment="CENTER" layoutX="82.0" layoutY="116.0" prefHeight="17.0" prefWidth="39.0" text="karma" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="deletePostButton" layoutX="680.0" layoutY="48.0" mnemonicParsing="false" onAction="#deletePost" prefHeight="30.0" prefWidth="32.0" style="-fx-background-insets: 0.7; -fx-background-radius: 100; -fx-background-color: #c6c6c6;" text="🗑" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

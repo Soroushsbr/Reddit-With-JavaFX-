@@ -1,0 +1,1 @@
+{"Comment":[{"karma":0,"Downvote":[],"Replay":[],"Upvote":[],"Text":"qaza bad","Writer":"soroush"}],"Username":"soroush","Downvote":[],"Post":"qaza ali","Upvote":["soroush"],"Title":"Ghormeh Sabzi","ID":"daa13931-8b0b-4768-aa18-636702592a3a","Subreddit":"Food","Karma":1}

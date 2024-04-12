@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="95.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reddit.SelectPost">
+   <children>
+      <Label layoutX="23.0" layoutY="6.0" text="u/username">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" layoutX="23.0" layoutY="23.0" prefHeight="52.0" prefWidth="469.0" text="text" />
+      <Label fx:id="indexLabel" layoutX="129.0" layoutY="15.0" opacity="0.0" prefHeight="17.0" prefWidth="0.0" text="jsonUser" />
+      <Button fx:id="commentButton" layoutX="-4.0" mnemonicParsing="false" opacity="0.0" prefHeight="95.0" prefWidth="500.0" text="selectComment" />
+      <Line endX="395.0" layoutX="101.0" layoutY="95.0" startX="-105.0" />
+   </children>
+</AnchorPane>

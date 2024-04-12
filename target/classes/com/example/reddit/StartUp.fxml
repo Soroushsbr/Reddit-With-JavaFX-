@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="621.0" prefWidth="526.0" style="-fx-background-color: #282A36;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reddit.StartUp">
+   <children>
+      <Label layoutX="223.0" layoutY="257.0" text="Username" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="222.0" layoutY="341.0" text="Password" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userField" layoutX="169.0" layoutY="285.0" prefHeight="25.0" prefWidth="183.0" promptText="username" style="-fx-background-radius: 50; -fx-background-color: #44475A; -fx-text-fill: white;" />
+      <PasswordField fx:id="passField" layoutX="168.0" layoutY="372.0" prefHeight="25.0" prefWidth="183.0" promptText="password" style="-fx-background-radius: 50; -fx-background-color: #44475A; -fx-text-fill: white;" />
+      <Button fx:id="login" layoutX="235.0" layoutY="420.0" mnemonicParsing="false" onAction="#login" style="-fx-background-insets: 0.5; -fx-background-radius: 50; -fx-background-color: #6272A4;" text="Log in" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label layoutX="181.0" layoutY="512.0" prefHeight="19.0" prefWidth="142.0" text="Dont have an account?" textFill="#ff0a00">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="validPass" layoutX="357.0" layoutY="397.0" prefHeight="17.0" prefWidth="14.0" text=" " textAlignment="CENTER" textFill="#eb0000" />
+      <Label fx:id="validUser" layoutX="357.0" layoutY="289.0" prefHeight="17.0" prefWidth="14.0" text=" " textAlignment="CENTER" textFill="#eb0000" />
+      <ImageView fitHeight="204.0" fitWidth="142.0" layoutX="190.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Reddit_VerticalLockup_OnDark.png" />
+         </image>
+      </ImageView>
+      <Hyperlink layoutX="315.0" layoutY="510.0" onAction="#signUp" text="Sign up" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>
