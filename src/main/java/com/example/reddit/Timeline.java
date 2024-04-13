@@ -50,11 +50,11 @@ public class Timeline {
         vboxSearch.getChildren().add(button);
         String regex = searchbar.getText();
         ArrayList<String> nameFind = new ArrayList<>();
-        if(regex.length()> 2){
+        if(regex.length()> 1){
             if(regex.startsWith("u/")){     //search for username
                 regex = regex.substring(2);
                 finder(nameFind , regex , "Account" , "Username");
-            }else if ((regex).startsWith("r/")){ //for subreddit
+            }else if ((regex).startsWith("r/")){        //for subreddit
                 regex = regex.substring(2);
                 finder(nameFind, regex , "Subreddit" , "Name");
             }else{  //for both

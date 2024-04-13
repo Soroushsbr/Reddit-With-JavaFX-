@@ -16,6 +16,7 @@ import java.util.Objects;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        System.out.println("Program starts");
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("StartUP.fxml")));
         stage.setScene(new Scene(root));
         Image icon = new Image(Main.class.getResourceAsStream("icon.png"));

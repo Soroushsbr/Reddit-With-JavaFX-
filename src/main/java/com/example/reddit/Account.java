@@ -22,29 +22,6 @@ public class Account {
         id = (UUID.randomUUID()).toString();
     }
 
-    public void setJoinedSubreddits(JSONArray jsonArray) {
-        for(int i = 0 ; i < jsonArray.length() ;i++){
-            joinedSubreddits.add(jsonArray.getString(i));
-        }
-    }
-
-    public void setAdminSubreddits(JSONArray jsonArray) {
-        for(int i = 0 ; i < jsonArray.length() ;i++){
-            adminSubreddits.add(jsonArray.getString(i));
-        }
-    }
-
-    public void setFollowers(JSONArray jsonArray){
-        for(int i = 0 ; i < jsonArray.length() ;i++){
-            followers.add(jsonArray.getString(i));
-        }
-    }
-
-    public void setFollowings(JSONArray jsonArray){
-        for(int i = 0 ; i < jsonArray.length() ;i++){
-            followings.add(jsonArray.getString(i));
-        }
-    }
 
     public void setAbout(String about) {
         this.about = about;

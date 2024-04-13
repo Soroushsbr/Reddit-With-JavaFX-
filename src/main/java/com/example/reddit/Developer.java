@@ -12,42 +12,6 @@ public class Developer{
         }
     }
 
-    /*private void reportMenu(){
-        Scanner in = new Scanner(System.in);
-        Files file = new Files();
-        ArrayList<String> reports = new ArrayList<>();
-        file.fileReader(reports , "Reports" , 2);
-        for(int i = 0 ; i < reports.size() ; i++){
-            System.out.println("(" + (i + 1) + ") " + reports.get(i));
-        }
-        int index = in.nextInt();
-        try {
-            String str = reports.get(index - 1);
-            JSONObject selectedAccount = new JSONObject(str);
-            System.out.println("(1) Delete the Post\n(2) Delete Account\n(3) Ignore\n(4) Exit");
-            switch (in.next()){
-                case "1":
-                    file.deletePost(selectedAccount);
-                    deleteFromList(str);
-                    reportMenu();
-                    break;
-                case "2":
-                    JSONObject acc = new JSONObject(file.usernameFind(selectedAccount.getString("Username")));
-                    Account account = new Account(selectedAccount.getString("Username"));
-                    account.deleteAccount(acc);
-                    deleteFromList(str);
-                    break;
-                case "3":
-                    deleteFromList(str);
-                    break;
-                default:
-
-            }
-        }catch (IndexOutOfBoundsException e){
-            reportMenu();
-        }
-    }*/
-
     private void deleteFromList(String user){
         Files file = new Files();
         ArrayList<String> list = new ArrayList<>();

@@ -1,2 +1,2 @@
-{"Admins":["soroush"],"Members":["soroush","sepanta","mita"],"Name":"Food","About":"yummy"}
-{"Admins":["mita"],"Members":["mita"],"Name":"blackheads","About":"community for black metal lovers uwu"}
+{"Admins":["soroush"],"Members":["soroush"],"Name":"Indie","About":"Music for your soul"}
+{"Admins":["soroush"],"Members":["soroush"],"Name":"blackheads","About":"A place for who love black metal uwu"}

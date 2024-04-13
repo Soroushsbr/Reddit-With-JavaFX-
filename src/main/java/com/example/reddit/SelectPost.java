@@ -153,7 +153,7 @@ public class SelectPost {
     @FXML
     AnchorPane selectedCommentPane;
     @FXML
-    Label writerLabel;
+    Hyperlink writerLink;
     @FXML
     Label commentTextLabel;
     @FXML
@@ -161,17 +161,32 @@ public class SelectPost {
     JSONObject comment = new JSONObject();
 
     public void selectComment(Button commentButton , Label index){
+        System.out.println("Comment selected");
         listViewReplay.getItems().clear();
         this.index = Integer.parseInt(index.getText());
         selectedCommentPane.setVisible(true);
         comment = new JSONObject(commentButton.getText());
-        writerLabel.setText( "u/" + comment.getString("Writer"));
+        writerLink.setText( "u/" + comment.getString("Writer"));
         commentTextLabel.setText(comment.getString("Text"));
         karmaCommentLabel.setText(String.valueOf(comment.getInt("karma")));
         ArrayList<String> replays = new ArrayList<>();
         Main.jsonToList(comment.getJSONArray("Replay") , replays);
         listViewReplay.getItems().addAll(replays);
         backgroundReplay.setVisible(true);
+    }
+    public void selectWriter(ActionEvent event) throws IOException {
+        System.out.println("user selected");
+        String writer = writerLink.getText();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile.fxml"));
+        root = loader.load();
+        Profile profile = loader.getController();
+        Files files = new Files();
+        JSONObject selectedUser = new JSONObject(files.usernameFind(writer.substring(2)));
+        profile.setInfo(selectedUser , "SelectPost.fxml" , user);
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
     public void hideComment(){
         selectedCommentPane.setVisible(false);
@@ -202,6 +217,8 @@ public class SelectPost {
         ArrayList<String> replays = new ArrayList<>();
         Main.jsonToList(comment.getJSONArray("Replay") , replays);
         listViewReplay.getItems().addAll(replays);
+        System.out.println("replay added");
+        textAreaReplay.setVisible(false);
         showComment();
     }
 
@@ -233,7 +250,6 @@ public class SelectPost {
         ArrayList<JSONObject> newComments = new ArrayList<>();
         commentClass.jsonArraytoList(post.getJSONArray("Comment") , newComments);
         newComments.set(index , comment);
-        System.out.println(newComments);
         post.put("Comment" , newComments);
         commentClass.saveChanges(post.toString());
         commentClass.profileKarma(value , comment.getString("Writer"));
@@ -255,17 +271,9 @@ public class SelectPost {
     public void postComment(){
         JSONArray commentsJson = post.getJSONArray("Comment");
         String text = textArea.getText();
-        JSONObject json = new JSONObject();
-        ArrayList<String> upvotes = new ArrayList<>();
-        ArrayList<String> downvotes = new ArrayList<>();
-        ArrayList<String> replay = new ArrayList<>();
-        json.put("Text" , text);
-        json.put("Writer" , user.getString("Username"));
-        json.put("Upvote" , upvotes);
-        json.put("Downvote" , downvotes);
-        json.put("Replay" , replay);
-        json.put("karma" , 0);
-        commentsJson.put(json);
+        Comment commentClass = new Comment();
+        JSONObject newComment = commentClass.newComment(user , text);
+        commentsJson.put(newComment);
         post.put("Comment" ,commentsJson);
         Post selectedPost = new Post();
         selectedPost.saveChanges(post.toString());

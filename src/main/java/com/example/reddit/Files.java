@@ -112,7 +112,7 @@ public class Files {
         if(!(subList.isEmpty())){
             for(int i = 0 ; i < subList.size() ; i++){
                 JSONObject jsonObject = new JSONObject(subList.get(i));
-                if((jsonObject.getString("Name")).equals(jsonObject.getString("Name"))){
+                if((jsonObject.getString("Name")).equals(subJson.getString("Name"))){
                     save(subList, i, subJson , "Subreddit");
                 }
             }

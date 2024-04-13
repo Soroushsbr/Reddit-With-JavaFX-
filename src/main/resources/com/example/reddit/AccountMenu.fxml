@@ -15,11 +15,11 @@
 <AnchorPane prefHeight="546.0" prefWidth="811.0" style="-fx-background-color: #282A36;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reddit.AccountMenu">
    <children>
       <AnchorPane layoutX="62.0" layoutY="38.0" prefHeight="200.0" prefWidth="690.0" style="-fx-background-color: #44475A; -fx-background-radius: 10;" />
-      <Button layoutX="71.0" layoutY="201.0" mnemonicParsing="false" onAction="#posts" prefHeight="27.0" prefWidth="82.0" style="-fx-background-insets: 0.5; -fx-background-radius: 50; -fx-background-color: #F8F8F2;" text="Posts" />
-      <Button layoutX="657.0" layoutY="201.0" mnemonicParsing="false" onAction="#following" prefHeight="27.0" prefWidth="82.0" style="-fx-background-insets: 0.5; -fx-background-radius: 50; -fx-background-color: #F8F8F2;" text="Followings" />
-      <Button layoutX="520.0" layoutY="201.0" mnemonicParsing="false" onAction="#follower" prefHeight="27.0" prefWidth="82.0" style="-fx-background-insets: 0.5; -fx-background-radius: 50; -fx-background-color: #F8F8F2;" text="Followers" />
-      <Button layoutX="208.0" layoutY="201.0" mnemonicParsing="false" onAction="#newPost" prefHeight="27.0" prefWidth="82.0" style="-fx-background-insets: 0.5; -fx-background-radius: 50; -fx-background-color: #F8F8F2;" text="New Post" />
-      <Button alignment="CENTER" layoutX="698.0" layoutY="57.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="52.0" style="-fx-background-insets: 0.5; -fx-background-radius: 50; -fx-background-color: #F8F8F2;" text="Log out">
+      <Button layoutX="71.0" layoutY="201.0" mnemonicParsing="false" onAction="#posts" prefHeight="27.0" prefWidth="82.0" style="-fx-background-insets: 0.5; -fx-background-radius: 50; -fx-background-color: #282A36;" text="Posts" textFill="WHITE" />
+      <Button layoutX="657.0" layoutY="201.0" mnemonicParsing="false" onAction="#following" prefHeight="27.0" prefWidth="82.0" style="-fx-background-insets: 0.5; -fx-background-radius: 50; -fx-background-color: #282A36;" text="Followings" textFill="WHITE" />
+      <Button layoutX="520.0" layoutY="201.0" mnemonicParsing="false" onAction="#follower" prefHeight="27.0" prefWidth="82.0" style="-fx-background-insets: 0.5; -fx-background-radius: 50; -fx-background-color: #282A36;" text="Followers" textFill="WHITE" />
+      <Button layoutX="208.0" layoutY="201.0" mnemonicParsing="false" onAction="#newPost" prefHeight="27.0" prefWidth="82.0" style="-fx-background-insets: 0.5; -fx-background-radius: 50; -fx-background-color: #282A36;" text="New Post" textFill="WHITE" />
+      <Button alignment="CENTER" layoutX="698.0" layoutY="57.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="52.0" style="-fx-background-insets: 0.5; -fx-background-radius: 50; -fx-background-color: #282A36;" text="Log out" textFill="WHITE">
          <font>
             <Font size="11.0" />
          </font>
@@ -39,36 +39,39 @@
             <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <Button layoutX="71.0" layoutY="45.0" mnemonicParsing="false" onAction="#timeline" style="-fx-background-insets: 0.5; -fx-background-radius: 100; -fx-background-color: #F8F8F2;" text="⬅" />
+      <Button layoutX="71.0" layoutY="45.0" mnemonicParsing="false" onAction="#timeline" style="-fx-background-insets: 0.5; -fx-background-radius: 100; -fx-background-color: #282A36;" text="⬅" textFill="WHITE" />
       <AnchorPane fx:id="newPostPane" layoutX="61.0" layoutY="248.0" prefHeight="284.0" prefWidth="690.0" visible="false">
          <children>
-            <TextArea fx:id="textArea" layoutX="166.0" layoutY="77.0" prefHeight="200.0" prefWidth="358.0" promptText="Add a Text..." />
-            <TextField fx:id="textField" layoutX="166.0" layoutY="52.0" prefHeight="25.0" prefWidth="170.0" promptText="Add an intersting title...." />
-            <Button layoutX="485.0" layoutY="27.0" mnemonicParsing="false" onAction="#post" text="Post" />
-            <ComboBox fx:id="comboBox" layoutX="166.0" layoutY="27.0" prefHeight="25.0" prefWidth="98.0" promptText="Subreddit" />
+            <TextArea fx:id="textArea" layoutX="166.0" layoutY="77.0" prefHeight="200.0" prefWidth="358.0" promptText="Add a Text..." style="-fx-text-fill: white; -fx-control-inner-background: #44475A;" />
+            <TextField fx:id="textField" layoutX="166.0" layoutY="52.0" prefHeight="25.0" prefWidth="170.0" promptText="Add an intersting title...." style="-fx-background-radius: 3; -fx-background-color: #44475A; -fx-text-fill: white;" />
+            <Button layoutX="485.0" layoutY="27.0" mnemonicParsing="false" onAction="#post" style="-fx-background-color: #F8F8F2; -fx-background-radius: 100;" text="Post" />
+            <ComboBox fx:id="comboBox" layoutX="166.0" layoutY="27.0" prefHeight="25.0" prefWidth="98.0" promptText="Subreddit" style="-fx-background-color: #F8F8F2; -fx-background-radius: 4; -fx-background-insets: 1;" />
          </children>
       </AnchorPane>
-      <Button layoutX="365.0" layoutY="201.0" mnemonicParsing="false" onAction="#subreddit" prefHeight="27.0" prefWidth="82.0" style="-fx-background-insets: 0.5; -fx-background-radius: 50; -fx-background-color: #F8F8F2;" text="Subreddit" />
+      <Button layoutX="365.0" layoutY="201.0" mnemonicParsing="false" onAction="#subreddit" prefHeight="27.0" prefWidth="82.0" style="-fx-background-insets: 0.5; -fx-background-radius: 50; -fx-background-color: #282A36;" text="Subreddit" textFill="WHITE" />
       <Label fx:id="about" layoutX="112.0" layoutY="153.0" text="About :" textFill="WHITE" />
       <AnchorPane fx:id="subPane" layoutX="71.0" layoutY="258.0" prefHeight="221.0" prefWidth="690.0" visible="false">
          <children>
-            <TextArea fx:id="subAbout" layoutX="14.0" layoutY="52.0" prefHeight="83.0" prefWidth="358.0" promptText="Tell us About your Subreddit..." />
-            <TextField fx:id="subName" layoutX="14.0" layoutY="27.0" prefHeight="25.0" prefWidth="170.0" promptText="Name your Subreddit" />
-            <Button layoutX="320.0" layoutY="27.0" mnemonicParsing="false" onAction="#newSubreddit" text="Create" />
+            <TextArea fx:id="subAbout" layoutX="14.0" layoutY="52.0" prefHeight="83.0" prefWidth="358.0" promptText="Tell us About your Subreddit..." style="-fx-control-inner-background: #44475A; -fx-text-fill: white;" />
+            <TextField fx:id="subName" layoutX="14.0" layoutY="27.0" prefHeight="25.0" prefWidth="170.0" promptText="Name your Subreddit" style="-fx-background-color: #44475A; -fx-text-fill: white;" />
+            <Button layoutX="320.0" layoutY="27.0" mnemonicParsing="false" onAction="#newSubreddit" style="-fx-background-color: #44475A;" text="Create" textFill="WHITE" />
             <Label fx:id="notValid" layoutX="193.0" layoutY="31.0" prefHeight="17.0" prefWidth="128.0" text="Subreddit already exist" textFill="#b50000" visible="false" />
-            <Label alignment="CENTER" layoutX="508.0" layoutY="19.0" prefHeight="17.0" prefWidth="116.0" text="Your Subreddits" />
+            <Label alignment="CENTER" layoutX="508.0" layoutY="19.0" prefHeight="17.0" prefWidth="116.0" text="Your Subreddits" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
             <ScrollPane layoutX="493.0" layoutY="36.0" prefHeight="183.0" prefWidth="146.0">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="179.0" prefWidth="141.0">
                      <children>
-                        <ListView fx:id="subs" layoutX="-5.0" layoutY="-6.0" prefHeight="189.0" prefWidth="152.0" />
+                        <ListView fx:id="subs" layoutX="-5.0" layoutY="-6.0" prefHeight="189.0" prefWidth="152.0" style="-fx-background-color: #282A36;" />
                      </children>
                   </AnchorPane>
               </content>
             </ScrollPane>
          </children>
       </AnchorPane>
-      <Button layoutX="633.0" layoutY="57.0" mnemonicParsing="false" onAction="#showSetting" prefHeight="27.0" prefWidth="58.0" style="-fx-background-insets: 0.5; -fx-background-radius: 50; -fx-background-color: #F8F8F2;" text="Setting" />
+      <Button layoutX="633.0" layoutY="57.0" mnemonicParsing="false" onAction="#showSetting" prefHeight="27.0" prefWidth="58.0" style="-fx-background-insets: 0.5; -fx-background-radius: 50; -fx-background-color: #282A36;" text="Setting" textFill="WHITE" />
       <ScrollPane fx:id="scrollPanePosts" hbarPolicy="NEVER" layoutX="61.0" layoutY="248.0" prefHeight="284.0" prefWidth="690.0" style="-fx-background-color: #282A3gray6;" visible="false">
          <content>
             <VBox fx:id="vboxPost" prefHeight="282.0" prefWidth="688.0" style="-fx-background-color: #282A36;" />

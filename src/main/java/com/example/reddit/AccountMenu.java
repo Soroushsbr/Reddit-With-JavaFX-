@@ -38,11 +38,7 @@ public class AccountMenu {
     @FXML
     ScrollPane scrollPanePosts;
     @FXML
-    ListView<String> listView;
-    @FXML
     Label about;
-
-
     private Stage stage;
     private Scene scene;
     private Parent root;
@@ -65,6 +61,7 @@ public class AccountMenu {
     TextArea textArea;
 
     public void newPost(){
+        System.out.println("new post panel");
         followPane.setVisible(false);
         buttonView.setVisible(false);
         scrollPanePosts.setVisible(false);
@@ -93,11 +90,13 @@ public class AccountMenu {
         file.fileWriter(subreddit , json.toString(), 3 , true );
         file.fileWriter("Explore" , json.toString(), 2 , true);
         newPostPane.setVisible(false);
+        System.out.println("new post has made");
     }
     @FXML
     VBox vboxPost;
 
     public void posts(){
+        System.out.println("your posts showed");
         followPane.setVisible(false);
         buttonView.setVisible(false);
         newPostPane.setVisible(false);
@@ -154,6 +153,7 @@ public class AccountMenu {
     @FXML
     Button buttonView;
     public void following(){
+        System.out.println("Following list showed");
         newPostPane.setVisible(false);
         subPane.setVisible(false);
         scrollPanePosts.setVisible(false);
@@ -171,6 +171,7 @@ public class AccountMenu {
     }
 
     public void follower(){
+        System.out.println("follower panel showed");
         newPostPane.setVisible(false);
         subPane.setVisible(false);
         scrollPanePosts.setVisible(false);
@@ -221,6 +222,7 @@ public class AccountMenu {
     @FXML
     Label notValid;
     public void subreddit(){
+        System.out.println("subreddit Panel showed");
         followPane.setVisible(false);
         buttonView.setVisible(false);
         newPostPane.setVisible(false);
@@ -255,6 +257,8 @@ public class AccountMenu {
             user.put("Joined Subreddit" , temp);
             files.profileSave(user);
             files.fileWriter("Subreddit" , json.toString(), 2 , true );
+            System.out.println("new Subreddit made");
+            subPane.setVisible(false);
         }else{
             notValid.setVisible(true);
         }
@@ -269,11 +273,13 @@ public class AccountMenu {
     @FXML
     Rectangle backgroundSetting;
     public void showSetting(){
+        System.out.println("Setting Panel showed");
         backgroundSetting.setVisible(true);
         settingPane.setVisible(true);
     }
 
     public void  hideSetting(){
+        System.out.println("Setting Panel hide");
         settingPane.setVisible(false);
         backgroundSetting.setVisible(false);
     }

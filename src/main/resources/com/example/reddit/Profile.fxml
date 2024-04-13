@@ -32,7 +32,7 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Button fx:id="back" layoutX="78.0" layoutY="53.0" mnemonicParsing="false" onAction="#getBack" style="-fx-background-insets: 0.5; -fx-background-radius: 1000;" text="⬅" textAlignment="CENTER">
+      <Button fx:id="back" layoutX="78.0" layoutY="53.0" mnemonicParsing="false" onAction="#getBack" style="-fx-background-insets: 0.5; -fx-background-radius: 100;" text="⬅" textAlignment="CENTER">
          <font>
             <Font size="13.0" />
          </font>

@@ -12,13 +12,11 @@ public class Comment extends Post {
     private ArrayList<String> downvotes = new ArrayList<>();
     private ArrayList<String> replay = new ArrayList<>();
 
-    public JSONObject newComment(JSONObject currentUser){
-        Scanner in = new Scanner(System.in);
-        System.out.println("Drop a Comment");
-        text = in.nextLine();
+    public JSONObject newComment(JSONObject currentUser , String text){
+        this.text = text;
         writer = currentUser.getString("Username");
         JSONObject json = new JSONObject();
-        json.put("Text" , text);
+        json.put("Text" , this.text);
         json.put("Writer" , writer);
         json.put("Upvote" , upvotes);
         json.put("Downvote" , downvotes);
