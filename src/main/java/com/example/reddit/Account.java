@@ -113,6 +113,34 @@ public class Account {
             data += accounts.get(i) + "\n";
         }
         file.fileWriter("Account" , data , 2 , false);
+        //delete joined subreddit from them
+        ArrayList<String> subreddit = new ArrayList<>();
+        file.fileReader(subreddit , "Subreddit" , 2);
+        ArrayList<String> joinedSub = new ArrayList<>();
+        Main.jsonToList(user.getJSONArray("Joined Subreddit") , joinedSub);
+        ArrayList<String> member = new ArrayList<>();
+        for(String sub : subreddit){
+            if(joinedSub.contains(sub)){
+                JSONObject temp = new JSONObject(sub);
+                member.clear();
+                Main.jsonToList(temp.getJSONArray("Member") , member);
+                member.remove(user.getString("Username"));
+                temp.put("Members" , member);
+                file.subredditSave(temp);
+            }
+        }
+        //delete follower
+        ArrayList<String> followers = new ArrayList<>();
+        ArrayList<String> followings = new ArrayList<>();
+        Main.jsonToList(user.getJSONArray("Followers") , followers);
+        for(String follower: followers){
+            JSONObject followerJson = new JSONObject(file.usernameFind(follower));
+            followings.clear();
+            Main.jsonToList(followerJson.getJSONArray("Followings"), followings);
+            followings.remove(user.getString("Username"));
+            followerJson.put("Followers" , follower);
+            file.profileSave(followerJson);
+        }
     }
 
     public void addAdmin(String subreddit) {

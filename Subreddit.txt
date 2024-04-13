@@ -1,1 +1,2 @@
-{"Admins":["soroush"],"Members":["soroush"],"Name":"Food","About":"yummy"}
+{"Admins":["soroush"],"Members":["soroush","sepanta","mita"],"Name":"Food","About":"yummy"}
+{"Admins":["mita"],"Members":["mita"],"Name":"blackheads","About":"community for black metal lovers uwu"}

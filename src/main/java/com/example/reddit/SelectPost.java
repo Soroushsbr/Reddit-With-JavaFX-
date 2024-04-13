@@ -196,6 +196,7 @@ public class SelectPost {
     public void AddReplay(){
         listViewReplay.getItems().clear();
         String replay = textAreaReplay.getText();
+        replay = "u/" + user.getString("Username") + "\n" + replay;
         Comment commentClass = new Comment();
         commentClass.addReplay(comment , replay , post , index);
         ArrayList<String> replays = new ArrayList<>();
