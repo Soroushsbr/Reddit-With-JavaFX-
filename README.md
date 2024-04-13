@@ -18,6 +18,14 @@ In Reddit there are different rules which I'm gonna explain them.
 * If you are not perfect at html and css you can use **SceneBuilder**.
 * Having the Last version of java is recommended.
 
+## Help 🚑
+**This one is really important:**
+1. go to Files Class
+2. there are two method called `filewriter` and `fileReader`
+3. you have to change the pathname of subreddit and account folder to your path.
+4. if you don't do these above the code won't work
+* ![img.png](img.png)
+
 ## Executing program ▶
 
 * Run the "Main" program.

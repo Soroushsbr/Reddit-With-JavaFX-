@@ -21,26 +21,7 @@
       <change afterPath="$PROJECT_DIR$/../Reddit/src/main/java/com/example/reddit/SubReddit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../First-Assignment-Warm-Up" beforeDir="false" afterPath="$PROJECT_DIR$/../First-Assignment-Warm-Up" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../New folder/Third-Assignment-Hogwarts" beforeDir="false" afterPath="$PROJECT_DIR$/../New folder/Third-Assignment-Hogwarts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Account.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Account.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Explore.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Explore.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Subreddit.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Subreddit.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/reddit/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/reddit/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/reddit/AccountMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/reddit/AccountMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/reddit/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/reddit/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/reddit/Developer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/reddit/Developer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/reddit/Files.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/reddit/Files.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/reddit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/reddit/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/reddit/NewPost.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/reddit/SelectPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/reddit/SelectPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/reddit/Timeline.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/reddit/Timeline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/reddit/AccountMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/reddit/AccountMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/reddit/Profile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/reddit/Profile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/reddit/SelectPost.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/reddit/SelectPost.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/reddit/AccountMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/reddit/AccountMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/reddit/SelectPost.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/reddit/SelectPost.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +136,7 @@
       <workItem from="1713003596446" duration="296000" />
       <workItem from="1713004591591" duration="3236000" />
       <workItem from="1713009038767" duration="1808000" />
+      <workItem from="1713011310075" duration="409000" />
     </task>
     <servers />
   </component>
