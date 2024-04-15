@@ -93,7 +93,6 @@ public void start(Stage stage) throws IOException {
 
 🔗 [Types of UML Diagrams](https://www.lucidchart.com/blog/types-of-UML-diagrams)
 
-🔗 [Guide to UUID in Java](https://www.baeldung.com/java-uuid)
 
 🔗 [Getting Started With Javafx](https://openjfx.io/openjfx-docs/)
 
