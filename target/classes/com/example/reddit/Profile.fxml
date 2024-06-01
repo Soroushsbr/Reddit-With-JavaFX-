@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="546.0" prefWidth="811.0" style="-fx-background-color: #282A36;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reddit.Profile">
+   <children>
+      <AnchorPane layoutX="407.0" layoutY="34.0" prefHeight="115.0" prefWidth="275.0" style="-fx-background-color: #44475A; -fx-background-radius: 10;" />
+      <Label fx:id="username" layoutX="117.0" layoutY="78.0" text="u/username" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="displayname" layoutX="117.0" layoutY="49.0" text="DisplayName" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="karma" alignment="CENTER" layoutX="443.0" layoutY="91.0" prefHeight="35.0" prefWidth="49.0" text="karma" textFill="WHITE" />
+      <Label layoutX="451.0" layoutY="122.0" text="Karma" textFill="WHITE" />
+      <Label fx:id="follower" alignment="CENTER" layoutX="512.0" layoutY="100.0" prefHeight="17.0" prefWidth="64.0" text="follower" textFill="WHITE" />
+      <Label layoutX="603.0" layoutY="122.0" text="Following" textFill="WHITE" />
+      <Label fx:id="following" alignment="CENTER" layoutX="597.0" layoutY="100.0" prefHeight="17.0" prefWidth="64.0" text="following" textFill="WHITE" />
+      <Label layoutX="521.0" layoutY="122.0" text="Follower" textFill="WHITE" />
+      <Button fx:id="follow" alignment="CENTER" layoutX="518.0" layoutY="66.0" mnemonicParsing="false" onAction="#follow" style="-fx-background-radius: 100; -fx-background-insets: 0.5; -fx-background-color: #6272A4;" text="Follow" textFill="WHITE" />
+      <Label fx:id="about" layoutX="99.0" layoutY="107.0" text="about" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="back" layoutX="78.0" layoutY="53.0" mnemonicParsing="false" onAction="#getBack" style="-fx-background-insets: 0.5; -fx-background-radius: 100;" text="⬅" textAlignment="CENTER">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <ScrollPane hbarPolicy="NEVER" layoutX="93.0" layoutY="154.0" prefHeight="392.0" prefWidth="625.0" style="-fx-background-color: #282A36;">
+         <content>
+            <VBox fx:id="vboxPost" prefHeight="390.0" prefWidth="623.0" style="-fx-background-color: #44475A;" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
